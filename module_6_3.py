@@ -46,7 +46,11 @@ class PoisonousAnimal(Animal):
     _DEGREE_OF_DANGER = 8
 
 class Duckbill(PoisonousAnimal, Bird, AquaticAnimal):
-    sound = "Click-click-click"
+    sound = "Click-click-click" # утконос
+    def __init__(self, speed):
+        super().__init__(speed)
+    def speak(self):
+        print(self.sound)
 
 db = Duckbill(10)
 
